@@ -31,12 +31,17 @@
 				<extensions>true</extensions>
 				<configuration>
 				
-				<standaloneDeployment>
-				<muleVersion>4.3.0</muleVersion>
-				<muleHome>C:\work\mule-enterprise-standalone-4.3.0</muleHome>
-				<applicationName>helloWorld-cloudhub</applicationName>
-				</standaloneDeployment>
-				<classifier>mule-application</classifier>
+				<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>4.3.0</muleVersion>
+						<server>anypoint.credentials</server>
+						<applicationName>helloWorld-cloudhub</applicationName>
+						<environment>Sandbox</environment>
+						<region>eu-central-1</region>
+						<workers>1</workers>
+						<workerType>MICRO</workerType>
+						<objectStoreV2>true</objectStoreV2>
+				</cloudHubDeployment>
                 </configuration>
 			</plugin>
 		</plugins>
