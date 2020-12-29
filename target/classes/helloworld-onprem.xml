@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="51fa2c1e-6967-44ec-bb0e-efa976524b73" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="helloworld-onpremFlow" doc:id="3e4e3471-e098-4190-bcef-bfb64e7d0fc8" >
+		<http:listener doc:name="Listener" doc:id="0a326854-655c-46ae-8a98-802d58a7243b" config-ref="HTTP_Listener_config" path="/hello"/>
+		<set-payload value="Hello world !!!!!!!" doc:name="Set Payload" doc:id="07c2dc22-f966-4b70-8d5b-03615e5c767e" />
+		<logger level="INFO" doc:name="Logger" doc:id="bb94bf42-1525-4603-b406-5378f8aafca9" message="Flow ends !!!!!!!!!!"/>
+	</flow>
+</mule>
