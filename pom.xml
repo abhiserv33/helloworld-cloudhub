@@ -35,7 +35,7 @@
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.3.0</muleVersion>
 						<server>anypoint.credentials</server>
-						<applicationName>helloWorld-cloudhub</applicationName>
+						<applicationName>helloworld-stepup</applicationName>
 						<environment>Development</environment>
 						<region>eu-central-1</region>
 						<workers>1</workers>
