@@ -30,8 +30,8 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-				
-				<cloudHubDeployment>
+					<classifier>mule-application</classifier>
+					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.3.0</muleVersion>
 						<server>anypoint.credentials</server>
@@ -41,8 +41,8 @@
 						<workers>1</workers>
 						<workerType>MICRO</workerType>
 						<objectStoreV2>true</objectStoreV2>
-				</cloudHubDeployment>
-                </configuration>
+					</cloudHubDeployment>
+                		</configuration>
 			</plugin>
 		</plugins>
 	</build>
