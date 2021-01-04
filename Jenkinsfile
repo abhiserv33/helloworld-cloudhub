@@ -19,7 +19,7 @@ pipeline {
 		stage('Test') {
 			steps {
 				git url: 'https://github.com/abhiserv33/helloworld-cloudhub.git', branch: 'master', credentialsId: '23c36c5f-e294-4923-8190-873c62acbe17'
-				bat "newman run https://www.getpostman.com/collections/b122c7c57be11651821a -r htmlextra"
+				bat "newman run https://www.getpostman.com/collections/b122c7c57be11651821a"
 			}
 		}
 	}
